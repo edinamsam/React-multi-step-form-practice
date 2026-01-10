@@ -96,6 +96,16 @@ input {
   cursor: pointer;
 }
 
+.info-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: crimson;
+  font-size: 12px;
+}
+
 .select-plan-container {
   width: 90%;
 }
@@ -111,6 +121,11 @@ input {
   padding: 10px;
   width: 30%;
   height: 40vh;
+}
+
+.active-plan {
+  border: 2px solid #483eff;
+  background-color: #f0f4ff;
 }
 
 .plan-toggle {

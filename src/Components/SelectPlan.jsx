@@ -38,7 +38,9 @@ function SelectPlan() {
               <>
                 <label
                   key={p.name}
-                  className="plan-container"
+                  className={`plan-container ${
+                    formData.plan === p.name ? "active-plan" : ""
+                  }`}
                   onClick={() => handlePlanSelect(p.name)}
                 >
                   <img src="" alt={`${p.name} icon`} />
