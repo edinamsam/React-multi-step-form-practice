@@ -1,0 +1,453 @@
+body {
+  margin: 0;
+  /*overflow: hidden;*/
+}
+
+.app-container {
+  display: flex;
+  padding: 15px;
+  width: 98vw;
+  height: 90vh;
+  justify-content: center;
+}
+
+.app-nav {
+  width: 30%;
+  height: 99%;
+  background-color: mediumblue;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.nav-link {
+  display: flex;
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+}
+
+.nav-link>span {
+  width: 18px;
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 18px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.nav-link h3 {
+  margin-top: 0px;
+}
+
+.nav-link.active>span {
+  background-color: lightcyan;
+  color: black;
+}
+
+main {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/*.info-container button{
+  bottom: 10px;
+}*/
+
+.info-container {
+  width: 90%;
+}
+
+.info-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 300px;
+}
+
+.info-form label {
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  height: 30px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.info-btn-container {
+  display: flex;
+  justify-content: right;
+}
+
+.info-btn {
+  width: 90px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.info-btn:hover {
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+.select-plan-container {
+  width: 90%;
+}
+
+.plans {
+  display: flex;
+  gap: 10px;
+}
+
+.plan-container {
+  border: 1px solid blue;
+  border-radius: 4px;
+  padding: 10px;
+  width: 30%;
+  height: 40vh;
+}
+
+.plan-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+  margin-bottom: 140px;
+  background-color: gray;
+}
+
+.plan-toggle label {
+  position: relative;
+  display: block;
+  align-items: center;
+  width: 50px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.plan-toggle label input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.plan-toggle label input:checked + .slider {
+  background-color: #4caf50;
+}
+
+.plan-toggle label input:checked +.slider::before {
+  transform: translate(24px);
+}
+
+.plan-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-btns button {
+  height: 30px;
+  width: 90px;
+  border-radius: 5px;
+}
+
+.plan-btns button:hover {
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+.add-ons-container {
+  width: 100%;
+}
+
+.add-ons {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 140px;
+}
+
+.add-ons-online {
+  border: 1px solid blue;
+  border-radius: 5px;
+  width: 95%;
+  height: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.online-on {
+  margin-left: 5%;
+}
+
+.add-ons-online span {
+  margin-left: auto;
+}
+
+.add-ons-larger {
+  border: 1px solid blue;
+  border-radius: 5px;
+  width: 95%;
+  height: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.add-ons-larger span {
+  margin-left: auto;
+}
+
+.larger-on {
+  margin-left: 5%;
+}
+
+.add-ons-customizable {
+  border: 1px solid blue;
+  border-radius: 5px;
+  width: 95%;
+  height: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.customizable {
+  margin-left: 5%;
+}
+
+.add-ons-customizable span {
+  margin-left: auto;
+}
+
+.add-ons-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-ons-btns button {
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+}
+
+.add-ons-btns button:hover {
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+.summary-container {
+  width: 90%;
+}
+
+.summary-sub-container {
+  background-color:rgba(237, 239, 239, 0.493);
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.addon-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  display: flex;
+  gap: 77%;
+  padding: 10px;
+  margin-bottom: 160px;
+}
+
+.summary-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-btns button {
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+}
+
+.summary-btns button:hover {
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
+}
+
+hr {
+  width: 100%;
+  display: block;
+}
+
+.confirmation-container {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.confirmation-icon {
+  font-size: 48px;
+  color: white;
+  background-color: #4caf50;
+  width: 70px;
+}
+
+
+@media (max-width: 767px) {
+  body {
+    background-color: rgba(218, 219, 219, 0.493);
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 100vw;
+  }
+
+  .app-nav, main {
+    width: 100%;
+    height: auto;
+  }
+
+  .app-nav {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+  }
+
+  /*.nav-link {
+    
+  }*/
+
+  .nav-link div{
+    display: none;
+  }
+
+  main {
+    border-radius: 5px;
+    background-color: white;
+    width: 80%;
+  }
+
+  .info-form input {
+    margin-bottom: 10px;
+  }
+
+  .plans {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+ .plan-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+  }
+  
+  .add-ons-container {
+    width: 90%;
+  } 
+
+  .summary-container {
+    width: 100%;
+  }
+
+  .summary-sub-container {
+    height: auto;
+    padding: 12px;
+  }
+
+  .summary-top {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .summary-bottom {
+    gap: 6px;
+  }
+
+  .summary-bottom span {
+    margin-right: 0;
+  }
+
+  .total {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .add-ons-online,
+  .add-ons-larger,
+  .add-ons-customizable {
+    height: 50px;
+  }
+
+  /*.flex-container link {
+    display: flex;
+  }*/
+
+  .info-form,
+  .plan-toggle,
+  .add-ons,
+  .summary-sub-container,
+  .total {
+    margin-bottom: 20px;
+  }
+
+  .plan-btns,
+  .add-ons-btns,
+  .summary-btns {
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
