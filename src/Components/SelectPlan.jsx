@@ -38,10 +38,17 @@ function SelectPlan() {
               <>
                 <label
                   key={p.name}
+                  tabIndex={0}
+                  role="button"
                   className={`plan-container ${
                     formData.plan === p.name ? "active-plan" : ""
                   }`}
                   onClick={() => handlePlanSelect(p.name)}
+                  onKeyDown={(e) => {
+                    if (e.key == "Enter" || e.key == " ") {
+                      handlePlanSelect(p.name);
+                    }
+                  }}
                 >
                   <img src="" alt={`${p.name} icon`} />
                   <div>
@@ -66,6 +73,7 @@ function SelectPlan() {
               type="checkbox"
               checked={formData.billing === "yearly"}
               onChange={toggleBilling}
+              aria-label="Toggle yearly billing"
             />
             <span className="slider"></span>
           </label>

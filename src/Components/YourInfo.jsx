@@ -42,31 +42,46 @@ function YourInfo() {
           <input
             type="text"
             placeholder="e.g. Stephen King"
+            id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
           />
-          {errors.name && <small className="error">{errors.name}</small>}
+          {errors.name && (
+            <small className="error" aria-live="polite">
+              {errors.name}
+            </small>
+          )}
 
-          <label htmlFor="email address">Email Address</label>
+          <label htmlFor="email">Email Address</label>
           <input
             type="text"
             placeholder="e.g. stephenking@lorem.com"
+            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
           />
-          {errors.email && <small className="error">{errors.email}</small>}
+          {errors.email && (
+            <small className="error" aria-live="polite">
+              {errors.email}
+            </small>
+          )}
 
-          <label htmlFor="phone number">Phone number</label>
+          <label htmlFor="phone">Phone number</label>
           <input
             type="text"
             placeholder="e.g. +1 234 567 890"
+            id="phone"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
           />
-          {errors.phone && <small className="error">{errors.phone}</small>}
+          {errors.phone && (
+            <small className="error" aria-live="polite">
+              {errors.phone}
+            </small>
+          )}
 
           <div className="info-btn-container">
             <button

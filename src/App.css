@@ -3,6 +3,11 @@ body {
   /*overflow: hidden;*/
 }
 
+:focus-visible {
+  outline: 3px solid #483eff;
+  outline-offset: 2px;
+}
+
 .app-container {
   display: flex;
   padding: 15px;
