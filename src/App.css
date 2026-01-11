@@ -351,7 +351,19 @@ hr {
   width: 90%;
   max-width: 500px;
   text-align: center;
-  margin-top: 60px;
+  margin: 80px auto 0; /* centers confirmation container */
+  animation: fadeIn 0.4s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .confirmation-icon {
@@ -359,6 +371,14 @@ hr {
   color: white;
   background-color: #4caf50;
   width: 70px;
+  height: 70px;
+  margin: 0 auto 25px; /* centers icon container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 50%;
 }
 
 

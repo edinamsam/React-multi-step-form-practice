@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { useForm } from "./FormContext";
 
 function Confirmation() {
   const navigate = useNavigate();
@@ -6,6 +7,8 @@ function Confirmation() {
   const { setFormData } = useForm();
 
   const handleFinish = () => {
+    localStorage.removeItem("formData");
+
     setFormData({
       name: "",
       email: "",
