@@ -470,6 +470,7 @@ hr {
   .add-ons-larger,
   .add-ons-customizable {
     height: 50px;
+    width: 100%;
   }
 
   /*.flex-container link {
