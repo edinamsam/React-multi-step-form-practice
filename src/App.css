@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  /*overflow: hidden;*/
 }
 
 :focus-visible {
@@ -58,10 +57,6 @@ main {
   align-items: center;
   padding: 10px;
 }
-
-/*.info-container button{
-  bottom: 10px;
-}*/
 
 .info-container {
   width: 90%;
@@ -404,10 +399,6 @@ hr {
     display: flex;
     justify-content: center;
   }
-
-  /*.nav-link {
-    
-  }*/
 
   .nav-link div{
     display: none;
